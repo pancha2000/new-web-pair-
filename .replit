@@ -1,0 +1,12 @@
+run = "npm install --no-audit --no-fund && node index.js"
+entrypoint = "index.js"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "npm install --no-audit --no-fund && node index.js"]
+
+[[ports]]
+localPort = 8000
+externalPort = 80
